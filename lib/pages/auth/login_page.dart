@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:untitled/pages/auth/sign_up_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -178,7 +179,9 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(width: 10.w),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Get.off(() => const SignUpPage());
+                  },
                   child: const Text(
                     'Sign up',
                     style: TextStyle(color: Colors.blue),
